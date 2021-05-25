@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscaminas</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div id="menu" class="menu">
+      <div class="contenedor-menu">
+        <div class="body-menu">
+          <div id="color-menu" class="head-menu">
+            <img id="cerrar-menu" class="cerrar-menu" src="images/close.svg" />
+            <div class="centro-imagen">
+              <img id="imagen-modal" src="images/ancla.svg"/>
+              <!-- <img src="images/victory.svg" class="ocultar" /> -->
+              <!-- <img src="images/skull.svg" class="ocultar" /> -->
+            </div>
+          </div>
+          <div class="configuracion">
+            <div class="mensaje-fin" id="fin-partida">
+
+            </div>
+            <div class="grupo-input">
+              <label for="fname">Tamaño</label>
+              <input type="number" id="tamanio" value="10" />
+              <span>mínimo: 5, máximo: 15</span>
+            </div>
+            <div class="grupo-input">
+              <label for="fname">Número de Minas</label>
+              <input type="number" id="bombras" value="10" />
+              <span>mínimo: 1, máximo: Tamaño</span>
+            </div>
+            <div class="contenedor-boton-jugar">
+              <button id="jugar" class="boton-jugar">JUGAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="nav">
+        <div>
+          <button id="boton-bandera" class="boton-bandera">
+            <img src="images/flag.svg" />
+          </button>
+          <div class="contador" id="banderas">0</div>
+          <div class="contenedor-reloj"><img src="images/reloj.svg" /></div>
+          <div class="contador" id="reloj">0</div>
+        </div>
+        <div>
+          <button id="boton-menu" class="boton-menu">
+            <img src="images/menu.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="contenedor-juego" class="contenedor-juego">
+      <div class="oculto"></div>
+      <div class="bomba"></div>
+      <div class="bandera"></div>
+      <div class="descubierto"></div>
+      <div class="descubierto">4</div>
+    </div>
+  </body>
+</html>

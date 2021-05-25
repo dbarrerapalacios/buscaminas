@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;200;300;400;500;600;700&display=swap");
+body {
+  margin: 0px;
+}
+.boton-menu {
+  padding-top: 19px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.boton-menu img {
+  height: 20px;
+  width: auto;
+}
+.header {
+  width: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  position: relative;
+}
+.nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav div {
+  display: inline-block;
+}
+.boton-bandera img {
+  height: 20px;
+  width: auto;
+}
+.boton-bandera {
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.boton-bandera.active {
+  background-color: #3ba9fd;
+}
+.contenedor-reloj img {
+  height: 20px;
+  width: auto;
+}
+.contenedor-reloj {
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 30px;
+  background-color: transparent;
+}
+.contador {
+  font-size: 20px;
+}
+/* estilo del menu modal */
+.menu {
+  position: fixed;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.507);
+  width: 100vw;
+  height: 100vh;
+}
+.ocultar-menu {
+  display: none;
+}
+.contenedor-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.body-menu {
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+.head-menu {
+  background-color: #3ba9fd;
+  height: 100px;
+  text-align: center;
+  position: relative;
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+}
+.cerrar-menu {
+  height: 15px;
+  width: auto;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 0px 15px 0px 15px;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+.centro-imagen {
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  width: 50px;
+  bottom: -50px;
+  height: 50px;
+  padding: 15px;
+}
+.centro-imagen img {
+  width: 50px;
+  height: auto;
+}
+.configuracion {
+  position: relative;
+  padding: 20px;
+}
+.grupo-input {
+  position: relative;
+  padding: 10px 20px 10px 0px;
+}
+.grupo-input input {
+  width: 100%;
+  display: block;
+}
+.grupo-input label {
+  font-weight: 600;
+  display: block;
+  padding-bottom: 3px;
+}
+.grupo-input span {
+  display: block;
+  padding-top: 3px;
+  font-size: small;
+  color: gray;
+}
+.contenedor-boton-jugar {
+  position: relative;
+  padding-top: 10px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+.boton-jugar {
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: #242424;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border: solid 0px;
+}
+/* final del estilo del menu modal */
+/* tablero */
+.contenedor-juego {
+  background-color: #fff;
+  height: calc(100vh - 62px);
+  width: 100%;
+  margin: 0px;
+  line-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+.oculto {
+  background: rgb(59, 169, 253);
+  /* background: radial-gradient(
+    circle,
+    rgba(59, 169, 253, 1) 0%,
+    rgb(126, 199, 255) 100%
+  ); */
+  background-image: url("images/subtle-grey.png");
+  background-repeat: repeat;
+  border: solid #031725 1px;
+  cursor: pointer;
+  margin: 0px;
+  display: inline-block;
+}
+.bomba {
+  background: rgb(26, 104, 163);
+  background-image: url("images/mine.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: solid #031725 1px;
+  cursor: pointer;
+  display: inline-block;
+  color: #fff;
+}
+.explosion {
+  background: rgb(26, 104, 163);
+  background-image: url("images/explosion.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: solid #031725 1px;
+  cursor: pointer;
+  display: inline-block;
+  color: #fff;
+}
+.bandera {
+  background: rgb(59, 169, 253);
+  background-image: url("images/flag.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: solid #031725 1px;
+  display: inline-block;
+  cursor: pointer;
+}
+.descubierto {
+  background: rgb(26, 104, 163);
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+  border: solid #031725 1px;
+  cursor: pointer;
+  color: #fff;
+}
+.mensaje-fin{
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+/* final tablero */
